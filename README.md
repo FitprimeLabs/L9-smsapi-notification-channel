@@ -15,7 +15,6 @@ Easy to use notification channel for Laravel 9.x.
 $user->notify(new TestSms('This is a test message'));
 ```
 
-This package is based on the package skeleton from [Laravel Notification Channels](https://laravel-notification-channels.com/)
 
 ## Contents
 
