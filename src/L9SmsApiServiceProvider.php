@@ -17,13 +17,13 @@ class L9SmsApiServiceProvider extends ServiceProvider
             if (empty($config['token']) || empty($config['service'])) {
                 throw new \Exception('L9SmsApi missing token and service in config');
             }
-            return new L9SmsApiChannel($config['token'],$config['service']);
 
+            return new L9SmsApiChannel($config['token'], $config['service']);
         });
 
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__ . '/../config/l9smsapi.php' => config_path('l9smsapi.php'),
+                __DIR__.'/../config/l9smsapi.php' => config_path('l9smsapi.php'),
             ], 'config');
         }
     }
@@ -33,6 +33,6 @@ class L9SmsApiServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__ . '/../config/l9smsapi.php', 'l9smsapi');
+        $this->mergeConfigFrom(__DIR__.'/../config/l9smsapi.php', 'l9smsapi');
     }
 }

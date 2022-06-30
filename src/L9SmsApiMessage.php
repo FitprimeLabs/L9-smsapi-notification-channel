@@ -2,8 +2,6 @@
 
 namespace NotificationChannels\L9SmsApi;
 
-use Illuminate\Support\Arr;
-
 class L9SmsApiMessage
 {
     public string $sender;
@@ -16,18 +14,21 @@ class L9SmsApiMessage
     public function content(string $content): self
     {
         $this->content = $content;
+
         return $this;
     }
 
     public function sender(string $sender): self
     {
         $this->sender = $sender;
+
         return $this;
     }
 
     public function to(string $phoneNumber): self
     {
-        $this->to= $phoneNumber;
+        $this->to = $phoneNumber;
+
         return $this;
     }
 }
