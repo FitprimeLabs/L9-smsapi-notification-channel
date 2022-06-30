@@ -1,6 +1,6 @@
 <?php
 
-namespace NotificationChannels\L9SmsApi;
+namespace Procionegobbo\L9SmsApi;
 
 use Illuminate\Support\ServiceProvider;
 

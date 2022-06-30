@@ -1,11 +1,11 @@
-Please see [this repo](https://github.com/laravel-notification-channels/channels) for instructions on how to submit a channel proposal.
+Please see [this repo](https://github.com/procionegobbo/channels) for instructions on how to submit a channel proposal.
 
 # Laravel 9 SMSAPI notification channel
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/laravel-notification-channels/l9-smsapi-notification-channel.svg?style=flat-square)](https://packagist.org/packages/laravel-notification-channels/l9-smsapi-notification-channel)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/procionegobbo/l9-smsapi-notification-channel.svg?style=flat-square)](https://packagist.org/packages/procionegobbo/l9-smsapi-notification-channel)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 [![StyleCI](https://styleci.io/repos/509148617/shield)](https://styleci.io/repos/509148617)
-[![Total Downloads](https://img.shields.io/packagist/dt/laravel-notification-channels/l9-smsapi-notification-channel.svg?style=flat-square)](https://packagist.org/packages/laravel-notification-channels/l9-smsapi-notification-channel)
+[![Total Downloads](https://img.shields.io/packagist/dt/procionegobbo/l9-smsapi-notification-channel.svg?style=flat-square)](https://packagist.org/packages/procionegobbo/l9-smsapi-notification-channel)
 
 This package makes it easy to send notifications using [SMSAPI](https://www.smsapi.com/it) with Laravel 9.x
 
@@ -15,6 +15,7 @@ Easy to use notification channel for Laravel 9.x.
 $user->notify(new TestSms('This is a test message'));
 ```
 
+This package is based on the package skeleton from [Laravel Notification Channels](https://laravel-notification-channels.com/)
 
 ## Contents
 
@@ -49,8 +50,8 @@ If you needs to change the default setting for your app you must publish the con
 
 ```php
 use Illuminate\Notifications\Notification;
-use NotificationChannels\L9SmsApi\L9SmsApiChannel;
-use NotificationChannels\L9SmsApi\L9SmsApiMessage;
+use Procionegobbo\L9SmsApi\L9SmsApiChannel;
+use Procionegobbo\L9SmsApi\L9SmsApiMessage;
 
 class TestSms extends Notification
 {

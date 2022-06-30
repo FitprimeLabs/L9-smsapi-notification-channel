@@ -1,6 +1,6 @@
 <?php
 
-use NotificationChannels\L9SmsApi\L9SmsApiChannel;
+use Procionegobbo\L9SmsApi\L9SmsApiChannel;
 
 return [
     'token' => env('SMSAPI_AUTH_TOKEN'),

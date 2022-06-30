@@ -1,8 +1,8 @@
 <?php
 
-namespace NotificationChannels\L9SmsApi\Test;
+namespace Procionegobbo\L9SmsApi\Test;
 
-use NotificationChannels\L9SmsApi\L9SmsApiMessage;
+use Procionegobbo\L9SmsApi\L9SmsApiMessage;
 
 class MessageTest extends \PHPUnit\Framework\TestCase
 {

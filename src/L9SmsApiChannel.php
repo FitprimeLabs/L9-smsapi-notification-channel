@@ -1,9 +1,9 @@
 <?php
 
-namespace NotificationChannels\L9SmsApi;
+namespace Procionegobbo\L9SmsApi;
 
 use Illuminate\Notifications\Notification;
-use NotificationChannels\L9SmsApi\Exceptions\CouldNotSendNotification;
+use Procionegobbo\L9SmsApi\Exceptions\CouldNotSendNotification;
 use Smsapi\Client\Curl\SmsapiHttpClient;
 use Smsapi\Client\Feature\Sms\Bag\SendSmsBag;
 use Smsapi\Client\Service\SmsapiComService;
@@ -33,7 +33,7 @@ class L9SmsApiChannel
      * @param  mixed  $notifiable
      * @param  \Illuminate\Notifications\Notification  $notification
      *
-     * @throws \NotificationChannels\L9SmsApi\Exceptions\CouldNotSendNotification
+     * @throws \Procionegobbo\L9SmsApi\Exceptions\CouldNotSendNotification
      */
     public function send($notifiable, Notification $notification): void
     {

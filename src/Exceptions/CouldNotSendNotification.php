@@ -1,6 +1,6 @@
 <?php
 
-namespace NotificationChannels\L9SmsApi\Exceptions;
+namespace Procionegobbo\L9SmsApi\Exceptions;
 
 class CouldNotSendNotification extends \Exception
 {
