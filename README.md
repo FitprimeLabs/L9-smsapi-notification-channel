@@ -30,6 +30,10 @@ $user->notify(new TestSms('This is a test message'));
 
 ## Installation
 
+```
+composer require procionegobbo/l9-smsapi-notification-channel
+```
+
 Create an account on [SMSAPI](https://www.smsapi.com/it) and get your API token.
 Put your api key in the .env file in the root directory of your application.
     
