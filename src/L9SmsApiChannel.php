@@ -2,8 +2,8 @@
 
 namespace NotificationChannels\L9SmsApi;
 
-use NotificationChannels\L9SmsApi\Exceptions\CouldNotSendNotification;
 use Illuminate\Notifications\Notification;
+use NotificationChannels\L9SmsApi\Exceptions\CouldNotSendNotification;
 use Smsapi\Client\Curl\SmsapiHttpClient;
 use Smsapi\Client\Feature\Sms\Bag\SendSmsBag;
 use Smsapi\Client\Service\SmsapiComService;
@@ -25,15 +25,13 @@ class L9SmsApiChannel
             self::SERVICE_PL => $this->service = $this->client->smsapiPlService($this->token),
             default => throw new \Exception('L9SmsApi missing token and service in config'),
         };
-
-
     }
 
     /**
      * Send the given notification.
      *
-     * @param mixed $notifiable
-     * @param \Illuminate\Notifications\Notification $notification
+     * @param  mixed  $notifiable
+     * @param  \Illuminate\Notifications\Notification  $notification
      *
      * @throws \NotificationChannels\L9SmsApi\Exceptions\CouldNotSendNotification
      */
@@ -45,7 +43,6 @@ class L9SmsApiChannel
         if (is_string($message)) {
             $message = new L9SmsApiMessage($message);
         }
-
 
         $sms = SendSmsBag::withMessage($message->to, $message->content);
         try {
