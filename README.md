@@ -1,23 +1,19 @@
 Please see [this repo](https://github.com/laravel-notification-channels/channels) for instructions on how to submit a channel proposal.
 
-# A Boilerplate repo for contributions
+# Laravel 9 SMSAPI notification channel
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/laravel-notification-channels/l9-smsapi-notification-channel.svg?style=flat-square)](https://packagist.org/packages/laravel-notification-channels/l9-smsapi-notification-channel)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
-[![Build Status](https://img.shields.io/travis/laravel-notification-channels/l9-smsapi-notification-channel/master.svg?style=flat-square)](https://travis-ci.org/laravel-notification-channels/l9-smsapi-notification-channel)
-[![StyleCI](https://styleci.io/repos/:style_ci_id/shield)](https://styleci.io/repos/:style_ci_id)
-[![SensioLabsInsight](https://img.shields.io/sensiolabs/i/:sensio_labs_id.svg?style=flat-square)](https://insight.sensiolabs.com/projects/:sensio_labs_id)
-[![Quality Score](https://img.shields.io/scrutinizer/g/laravel-notification-channels/l9-smsapi-notification-channel.svg?style=flat-square)](https://scrutinizer-ci.com/g/laravel-notification-channels/l9-smsapi-notification-channel)
-[![Code Coverage](https://img.shields.io/scrutinizer/coverage/g/laravel-notification-channels/l9-smsapi-notification-channel/master.svg?style=flat-square)](https://scrutinizer-ci.com/g/laravel-notification-channels/l9-smsapi-notification-channel/?branch=master)
+[![StyleCI](https://styleci.io/repos/509148617/shield)](https://styleci.io/repos/509148617)
 [![Total Downloads](https://img.shields.io/packagist/dt/laravel-notification-channels/l9-smsapi-notification-channel.svg?style=flat-square)](https://packagist.org/packages/laravel-notification-channels/l9-smsapi-notification-channel)
 
-This package makes it easy to send notifications using [L9SmsApi](link to service) with Laravel 5.5+, 6.x and 7.x
+This package makes it easy to send notifications using [SMSAPI](https://www.smsapi.com/it) with Laravel 9.x
 
-**Note:** Replace ```L9SmsApi``` ```L9SmsApi``` ```Federico Maiorini``` ```Procionegobbo``` ```https://fitprime.com``` ```procionegobbo@gmail.com``` ```l9-smsapi-notification-channel``` ```Experimental notification channel for Laravel 9``` ```:style_ci_id``` ```:sensio_labs_id``` with their correct values in [README.md](README.md), [CHANGELOG.md](CHANGELOG.md), [CONTRIBUTING.md](CONTRIBUTING.md), [LICENSE.md](LICENSE.md), [composer.json](composer.json) and other files, then delete this line.
-**Tip:** Use "Find in Path/Files" in your code editor to find these keywords within the package directory and replace all occurences with your specified term.
+Easy to use notification channel for Laravel 9.x.
 
-This is where your description should go. Add a little code example so build can understand real quick how the package can be used. Try and limit it to a paragraph or two.
-
+```php
+$user->notify(new TestSms('This is a test message'));
+```
 
 
 ## Contents
@@ -36,19 +32,49 @@ This is where your description should go. Add a little code example so build can
 
 ## Installation
 
-Please also include the steps for any third-party service setup that's required for this package.
+Create an account on [SMSAPI](https://www.smsapi.com/it) and get your API token.
+Put your api key in the .env file in the root directory of your application.
+    
+```dotenv
+SMSAPI_AUTH_TOKEN=<your_auth_token>
+```
 
 ### Setting up the L9SmsApi service
 
-Optionally include a few steps how users can set up the service.
+If you needs to change the default setting for your app you must publish the configuration file. 
 
 ## Usage
 
-Some code examples, make it clear how to use the package
+### Send a message
+
+```php
+use Illuminate\Notifications\Notification;
+use NotificationChannels\L9SmsApi\L9SmsApiChannel;
+use NotificationChannels\L9SmsApi\L9SmsApiMessage;
+
+class TestSms extends Notification
+{
+    public function via($notifiable)
+    {
+        return [L9SmsApiChannel::class];
+    }
+
+    public function toL9Smsapi($notifiable)
+    {
+        return (new L9SmsApiMessage())
+            ->content( 'Text message content' )
+            ->to($notifiable->phone_number);
+    }
+}
+```
 
 ### Available Message methods
 
-A list of all available options
+`content()` set the SMS message content
+
+`to()` set the SMS message recipient
+
+`sender()` set the SMS message sender
 
 ## Changelog
 
