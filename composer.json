@@ -1,6 +1,6 @@
 {
     "name": "procionegobbo/l9-smsapi-notification-channel",
-    "description": "Experimental notification channel for Laravel 9",
+    "description": "SMSAPI notification channel for Laravel 9",
     "homepage": "https://github.com/procionegobbo/l9-smsapi-notification-channel",
     "license": "MIT",
     "authors": [
