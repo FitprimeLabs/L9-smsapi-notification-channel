@@ -1,5 +1,3 @@
-Please see [this repo](https://github.com/procionegobbo/channels) for instructions on how to submit a channel proposal.
-
 # Laravel 9 SMSAPI notification channel
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/procionegobbo/l9-smsapi-notification-channel.svg?style=flat-square)](https://packagist.org/packages/procionegobbo/l9-smsapi-notification-channel)
