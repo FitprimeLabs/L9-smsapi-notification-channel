@@ -1,8 +1,8 @@
 <?php
 
-namespace Procionegobbo\L9SmsApi\Test;
+namespace Fitprime\L9SmsApi\Test;
 
-use Procionegobbo\L9SmsApi\L9SmsApiMessage;
+use Fitprime\L9SmsApi\L9SmsApiMessage;
 
 class MessageTest extends \PHPUnit\Framework\TestCase
 {

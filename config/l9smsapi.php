@@ -1,6 +1,6 @@
 <?php
 
-use Procionegobbo\L9SmsApi\L9SmsApiChannel;
+use Fitprime\L9SmsApi\L9SmsApiChannel;
 
 return [
     'token' => env('SMSAPI_AUTH_TOKEN'),

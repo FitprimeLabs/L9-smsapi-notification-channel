@@ -23,12 +23,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Procionegobbo\\L9SmsApi\\": "src"
+            "Fitprime\\L9SmsApi\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Procionegobbo\\L9SmsApi\\Test\\": "tests"
+            "Fitprime\\L9SmsApi\\Test\\": "tests"
         }
     },
     "scripts": {
@@ -41,7 +41,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Procionegobbo\\L9SmsApi\\L9SmsApiServiceProvider"
+                "Fitprime\\L9SmsApi\\L9SmsApiServiceProvider"
             ]
         }
     }

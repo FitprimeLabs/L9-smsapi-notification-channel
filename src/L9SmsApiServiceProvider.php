@@ -1,6 +1,6 @@
 <?php
 
-namespace Procionegobbo\L9SmsApi;
+namespace Fitprime\L9SmsApi;
 
 use Illuminate\Support\ServiceProvider;
 
