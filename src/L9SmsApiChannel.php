@@ -2,8 +2,8 @@
 
 namespace Fitprime\L9SmsApi;
 
-use Illuminate\Notifications\Notification;
 use Fitprime\L9SmsApi\Exceptions\CouldNotSendNotification;
+use Illuminate\Notifications\Notification;
 use Smsapi\Client\Curl\SmsapiHttpClient;
 use Smsapi\Client\Feature\Sms\Bag\SendSmsBag;
 use Smsapi\Client\Service\SmsapiComService;
