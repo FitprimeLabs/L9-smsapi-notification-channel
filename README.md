@@ -1,9 +1,9 @@
 # Laravel 9 SMSAPI notification channel
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/procionegobbo/l9-smsapi-notification-channel.svg?style=flat-square)](https://packagist.org/packages/procionegobbo/l9-smsapi-notification-channel)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/fitprime/l9-smsapi-notification-channel.svg?style=flat-square)](https://packagist.org/packages/fitprime/l9-smsapi-notification-channel)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 [![StyleCI](https://styleci.io/repos/509148617/shield)](https://styleci.io/repos/509148617)
-[![Total Downloads](https://img.shields.io/packagist/dt/procionegobbo/l9-smsapi-notification-channel.svg?style=flat-square)](https://packagist.org/packages/procionegobbo/l9-smsapi-notification-channel)
+[![Total Downloads](https://img.shields.io/packagist/dt/fitprime/l9-smsapi-notification-channel.svg?style=flat-square)](https://packagist.org/packages/fitprime/l9-smsapi-notification-channel)
 
 This package makes it easy to send notifications using [SMSAPI](https://www.smsapi.com/it) with Laravel 9.x
 
@@ -31,7 +31,7 @@ $user->notify(new TestSms('This is a test message'));
 ## Installation
 
 ```
-composer require procionegobbo/l9-smsapi-notification-channel
+composer require fitprime/l9-smsapi-notification-channel
 ```
 
 Create an account on [SMSAPI](https://www.smsapi.com/it) and get your API token.
@@ -51,8 +51,8 @@ If you needs to change the default setting for your app you must publish the con
 
 ```php
 use Illuminate\Notifications\Notification;
-use Procionegobbo\L9SmsApi\L9SmsApiChannel;
-use Procionegobbo\L9SmsApi\L9SmsApiMessage;
+use Fitprime\L9SmsApi\L9SmsApiChannel;
+use Fitprime\L9SmsApi\L9SmsApiMessage;
 
 class TestSms extends Notification
 {
@@ -90,7 +90,7 @@ $ composer test
 
 ## Security
 
-If you discover any security related issues, please email procionegobbo@gmail.com instead of using the issue tracker.
+If you discover any security related issues, please use the issue tracker.
 
 ## Contributing
 
