@@ -1,5 +1,5 @@
 {
-    "name": "procionegobbo/l9-smsapi-notification-channel",
+    "name": "fitprime/l9-smsapi-notification-channel",
     "description": "SMSAPI notification channel for Laravel 9",
     "homepage": "https://github.com/procionegobbo/l9-smsapi-notification-channel",
     "license": "MIT",
