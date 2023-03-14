@@ -37,14 +37,15 @@ class L9SmsApiChannel
      */
     public function send($notifiable, Notification $notification): void
     {
-        $to = $notifiable->routeNotificationFor('l9smsapi');
 
         $message = $notification->toL9Smsapi($notifiable);
         if (is_string($message)) {
             $message = new L9SmsApiMessage($message);
         }
 
-        $sms = SendSmsBag::withMessage($message->to, $message->content);
+        $to = $notifiable->routeNotificationFor('l9smsapi') ?? $message->to;
+
+        $sms = SendSmsBag::withMessage($to, $message->content);
         try {
             $response = $this->service->smsFeature()->sendSms($sms);
         } catch (\Exception $e) {
