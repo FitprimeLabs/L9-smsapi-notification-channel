@@ -37,7 +37,6 @@ class L9SmsApiChannel
      */
     public function send($notifiable, Notification $notification): void
     {
-
         $message = $notification->toL9Smsapi($notifiable);
         if (is_string($message)) {
             $message = new L9SmsApiMessage($message);
