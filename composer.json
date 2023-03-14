@@ -1,13 +1,13 @@
 {
     "name": "fitprime/l9-smsapi-notification-channel",
-    "description": "SMSAPI notification channel for Laravel 9",
-    "homepage": "https://github.com/procionegobbo/l9-smsapi-notification-channel",
+    "description": "SMSAPI notification channel for Laravel 8/9",
+    "homepage": "https://github.com/FitprimeLabs/L9-smsapi-notification-channel",
     "license": "MIT",
     "authors": [
         {
             "name": "Federico Maiorini",
             "email": "procionegobbo@gmail.com",
-            "homepage": "https://fitprime.com",
+            "homepage": "https://labs.fitprime.com",
             "role": "Developer"
         }
     ],
